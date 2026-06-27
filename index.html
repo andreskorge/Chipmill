@@ -738,7 +738,7 @@
     <div class="hero-content">
       <span class="hero-eyebrow">Hakkepuidu tootmine · Eesti</span>
       <h1>Eesti metsast<br/><em>kvaliteetne</em><br/>hakkepuit</h1>
-      <p class="hero-sub">Chipmill OÜ toodab kvaliteetset hakkepuitu energiatootmiseks. Usaldusväärsus, täpne ja paindlik logistika.</p>
+      <p class="hero-sub">Chipmill OÜ toodab kvaliteetset hakkepuitu energiatootmiseks, puiduplaatide tööstusele ja eksportturgudele. Usaldusväärsus, täpsed fraktsioonid ja paindlik logistika.</p>
       <div class="hero-actions">
         <a href="#kontakt" class="btn-primary">Küsi pakkumist</a>
         <a href="#teenused" class="btn-outline">Meie teenused</a>
@@ -751,7 +751,7 @@
     <!-- Stats bar -->
     <div class="stats-bar">
       <div class="stat-item">
-        <span class="stat-num">15+</span>
+        <span class="stat-num" id="yearsCount"></span>
         <span class="stat-label">Aastat kogemust</span>
       </div>
       <div class="stat-item">
@@ -1041,6 +1041,11 @@
   </footer>
 
   <script>
+    // Years since founding
+    const founded = new Date('2013-06-06');
+    const years = Math.floor((new Date() - founded) / (1000 * 60 * 60 * 24 * 365.25));
+    document.getElementById('yearsCount').textContent = years + '+';
+
     // Animated wood chip particles
     const container = document.getElementById('chipsVisual');
     if (container) {
