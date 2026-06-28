@@ -85,6 +85,33 @@
 
     .nav-cta:hover { background: var(--amber-light); color: var(--forest-deep) !important; }
 
+    /* Logo taustapilt hero sektsioonis */
+    .hero-logo-bg {
+      position: absolute;
+      right: 3vw;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 520px;
+      height: 520px;
+      background-image: url('Chipmill_logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.12;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero-logo-bg {
+        width: 280px;
+        height: 280px;
+        right: 50%;
+        transform: translate(50%, -50%);
+        opacity: 0.08;
+      }
+    }
+
     /* ── HERO ── */
     .hero {
       position: relative;
@@ -727,18 +754,18 @@
     <ul class="nav-links">
       <li><a href="#meist">Meist</a></li>
       <li><a href="#teenused">Teenused</a></li>
-      <li><a href="#hinnad">Hinnad</a></li>
-      <li><a href="#referentsid">Referentsid</a></li>
       <li><a href="#kontakt" class="nav-cta">Võta ühendust</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
+    <!-- Logo taustapilt -->
+    <div class="hero-logo-bg"></div>
     <div class="hero-content">
       <span class="hero-eyebrow">Hakkepuidu tootmine · Eesti</span>
       <h1>Eesti metsast<br/><em>kvaliteetne</em><br/>hakkepuit</h1>
-      <p class="hero-sub">Chipmill OÜ toodab kvaliteetset hakkepuitu energiatootmiseks. Ettevõtte missioon on olla usaldusväärne partner.</p>
+      <p class="hero-sub">Chipmill OÜ toodab ja tarnib kvaliteetset hakkepuitu. Töötleme metsamaterjali efektiivselt, täpselt ja vastutustundlikult.</p>
       <div class="hero-actions">
         <a href="#kontakt" class="btn-primary">Küsi pakkumist</a>
         <a href="#teenused" class="btn-outline">Meie teenused</a>
@@ -818,13 +845,11 @@
     <div>
       <p class="section-eyebrow">Kes me oleme</p>
       <h2 class="section-title">Kogemus<br/>metsatööstuse<br/>südames</h2>
-      <p class="section-lead">Chipmill OÜ on Eesti ettevõte, mis on spetsialiseerunud hakkepuidu tootmisele ja turustamisele. Kasutame kaasaegseid haketusseadmeid ning tagame klientidele täpse fraktsiooni, madala niiskusesisalduse ja usaldusväärse tarneaegade järgimise.</p>
+      <p class="section-lead">Chipmill OÜ on Eesti ettevõte, mis on spetsialiseerunud hakkepuidu tootmisele ja turustamisele. Kasutame kaasaegset hakketehnikat ning tagame kliendile kvaliteetse hakkepuidu ja usaldusväärse tarneaegade järgimise.</p>
       <ul class="about-list">
-        <li>Moodne haketuspark – liikuvad ja statsionaarsed seadmed</li>
-        <li>Täpne fraktsioonikontroll P16–P63 (EN ISO 17225)</li>
-        <li>Töötleme okaspuud, lehtpuud ja jäätmepuitu</li>
-        <li>Paindlik tarne – autoga, raudteed pidi või veekaudu</li>
-        <li>Sertifitseeritud päritolu ja keskkonnasäästlik tootmine</li>
+        <li>Okaspuu, lehtpuu ja hakkematerjaliks sobiva raiejäägi töötlemine</li>
+        <li>Kokkulepetest kinnipidav ja usaldusväärne partner</li>
+        <li>Sertifitseeritud päritolu ning keskkonnasäästlik tootmine</li>
       </ul>
     </div>
   </section>
@@ -839,119 +864,22 @@
       <div class="service-card">
         <span class="service-icon">🪵</span>
         <h3>Energiahakkepuit</h3>
-        <p>Soojus- ja elektrijaamadele mõeldud hakkepuit, optimeeritud niiskusesisalduse ja fraktsiooni poolest. Sobib nii katlamajadele kui suurtele koostootmisjaamadele.</p>
-        <span class="service-tag">P31 · P45 · P63</span>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">🏭</span>
-        <h3>Tööstuslik hakkepuit</h3>
-        <p>Puiduplaatide, tselluloosi- ja pabertööstuse toormaterjal. Täpne fraktsioon ja kontrollitud kvaliteet vastavalt tehase spetsifikatsioonidele.</p>
-        <span class="service-tag">P16 · P31</span>
+        <p>Soojus- ja elektrijaamadele mõeldud hakkepuit. Sobib nii katlamajadele kui suurtele koostootmisjaamadele.</p>
       </div>
       <div class="service-card">
         <span class="service-icon">🚛</span>
         <h3>Logistika ja tarne</h3>
-        <p>Omame kogemusi nii kohaliku kui rahvusvahelise logistika korraldamisel. Pakume hakkepuidu transporti maanteel, raudteel ja laevadega.</p>
-        <span class="service-tag">EE · LV · LT · FI</span>
+        <p>Omame kogemusi nii kohaliku kui rahvusvahelise logistika korraldamisel. Pakume hakkepuidu transporti teile sobivasse asukohta.</p>
       </div>
       <div class="service-card">
         <span class="service-icon">🌲</span>
-        <h3>Toorme hange</h3>
-        <p>Hangime tooret metsaomanikelt, saeveskitelt ja puidutöötlusettevõtetelt. Pakume ka metsa raiumise ja hakkimise teenust otse lõikealal.</p>
-        <span class="service-tag">FSC · PEFC</span>
+        <h3>Toorme kokkuost</h3>
+        <p>Ostame kokku hakkeks sobivat toormaterjali – metsaomanikelt, saeveskitelt ja puidutöötlusettevõtetelt. Kui sul on pakkuda toormaterjali, võta meiega ühendust.</p>
       </div>
       <div class="service-card">
         <span class="service-icon">📊</span>
         <h3>Kvaliteedikontroll</h3>
-        <p>Iga partii läbib proovivõtu ja laborianalüüsi. Dokumenteerime niiskusesisalduse, fraktsiooni, tuhasisalduse ja kütteväärtuse.</p>
-        <span class="service-tag">ISO 17225</span>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">♻️</span>
-        <h3>Jäätmepuidu töötlus</h3>
-        <p>Töötleme ettevõtete puidujäätmeid – ehitusjäätmeid, pakendijäätmeid ja tootmisjäägid. Keskkonnasõbralik lahendus puidujäätmete väärindamiseks.</p>
-        <span class="service-tag">R1 · R3</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- HINNAD -->
-  <section id="hinnad">
-    <p class="section-eyebrow">Hinnakiri</p>
-    <h2 class="section-title">Paindlikud<br/>hinnapaketid</h2>
-    <p class="section-lead">Hinnad sõltuvad kogusest, fraktsioonist, niiskusesisaldusest ja tarnetingimustest. Suurklientidele koostame personaalse pakkumise.</p>
-
-    <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Energiahake</h3>
-        <div class="price-amount">Alates 28 €/tihumeetri kohta · EXW tehase juures</div>
-        <ul class="price-features">
-          <li>Fraktsioon P31–P63</li>
-          <li>Niiskus ≤ 50% (G50)</li>
-          <li>Okaspuu ja lehtpuu segu</li>
-          <li>Miinimumtellimus 50 tm</li>
-          <li>Järjepidev tarnegraafik</li>
-        </ul>
-        <p class="price-note">* Hind kehtib konteineriga peale laadimisele. Transport eraldi.</p>
-      </div>
-
-      <div class="price-card featured">
-        <div class="price-badge">Populaarne</div>
-        <h3>Tööstushake</h3>
-        <div class="price-amount">Alates 35 €/tihumeetri kohta · EXW tehase juures</div>
-        <ul class="price-features">
-          <li>Fraktsioon P16–P31</li>
-          <li>Niiskus ≤ 30% (G30)</li>
-          <li>Sorteeritud okaspuu</li>
-          <li>Laborianalüüs iga partiile</li>
-          <li>Miinimumtellimus 100 tm</li>
-          <li>Pikaajaline lepingupartner</li>
-        </ul>
-        <p class="price-note">* Kvaliteedisertifikaat igale partiiale kaasas.</p>
-      </div>
-
-      <div class="price-card">
-        <h3>Jäätmepuidu töötlus</h3>
-        <div class="price-amount">Individuaalne hind · Küsi pakkumist</div>
-        <ul class="price-features">
-          <li>Ehitusjäätmed ja pakendipuit</li>
-          <li>Tootmisjäägid</li>
-          <li>Vastuvõtt tehase juures</li>
-          <li>Veodokumentatsioon</li>
-          <li>Keskkonnaluba olemas</li>
-        </ul>
-        <p class="price-note">* Hind sõltub materjali liigist ja kogusest.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- REFERENTSID -->
-  <section id="referentsid">
-    <p class="section-eyebrow">Klientide tagasiside</p>
-    <h2 class="section-title">Mida meie<br/>kliendid ütlevad</h2>
-    <p class="section-lead">Meie koostööpartnerid on soojusmajanduse ettevõtted, puiduplaatide tootjad ning metsaomanikud üle Baltimaade.</p>
-
-    <div class="refs-grid">
-      <div class="ref-card">
-        <p class="ref-quote">„Chipmill OÜ-ga teeme koostööd juba kolm hooaega. Hakkepuidu kvaliteet on stabiilne ja tarne alati graafikus – see on katlamaja jaoks kriitilise tähtsusega."</p>
-        <div>
-          <div class="ref-author">Andres K.</div>
-          <div class="ref-company">Lõuna-Eesti Soojus OÜ, tegevjuht</div>
-        </div>
-      </div>
-      <div class="ref-card">
-        <p class="ref-quote">„Fraktsioonikontroll ja niiskusesisalduse dokumendid on meile tootmisel hädavajalikud. Chipmill täidab kõik nõuded täpselt – professionaalne partner."</p>
-        <div>
-          <div class="ref-author">Mari L.</div>
-          <div class="ref-company">Eesti Puiduplaadid AS, hankeanalüütik</div>
-        </div>
-      </div>
-      <div class="ref-card">
-        <p class="ref-quote">„Metsaomanikuna saan toorme kätte õiglase hinnaga ja jäätmepuit läheb ka käiku. Lihtne ja aus koostöö."</p>
-        <div>
-          <div class="ref-author">Toomas V.</div>
-          <div class="ref-company">Erametsa omanik, Viljandimaa</div>
-        </div>
+        <p>Kontrollime materjali kogu tootmisprotsessi vältel, et tagada ühtlane kvaliteet ja usaldusväärne tulemus.</p>
       </div>
     </div>
   </section>
@@ -1036,11 +964,13 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Chip<span>mill</span></div>
-    <div class="footer-copy">© 2025 Chipmill OÜ. Kõik õigused kaitstud.</div>
+    <div class="footer-copy">© <span id="currentYear"></span> Chipmill OÜ. Kõik õigused kaitstud.</div>
     <div class="footer-reg">Hakkepuidu tootmine · Eesti</div>
   </footer>
 
   <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
     // Years since founding
     const founded = new Date('2013-06-06');
     const years = Math.floor((new Date() - founded) / (1000 * 60 * 60 * 24 * 365.25));
