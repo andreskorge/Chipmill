@@ -39,18 +39,37 @@
     }
 
     .lang-btn {
-      background: none;
-      border: 1.5px solid rgba(245,240,232,0.2);
-      border-radius: 4px;
-      padding: 0.25rem 0.5rem;
-      font-size: 1.2rem;
+      width: 48px;
+      height: 40px;
+      background: rgba(245, 240, 232, 0.06);
+      border: 1.5px solid rgba(245,240,232,0.22);
+      border-radius: 6px;
+      padding: 0;
       cursor: pointer;
       transition: border-color 0.2s, background 0.2s;
       line-height: 1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .lang-btn:hover { border-color: var(--amber); }
-    .lang-btn.active { border-color: var(--amber); background: rgba(200,134,10,0.2); }
+    .lang-btn:hover { 
+      border-color: var(--amber);
+      background: rgba(200, 134, 10, 0.14);
+      transform: translateY(-1px);
+    }
+    .lang-btn.active { 
+      border-color: var(--amber);
+      background: rgba(200,134,10,0.2); 
+    }
+
+    .lang-btn img {
+      width: 28px;
+      height: 20px;
+      object-fit: cover;
+      display: block;
+    }
 
     /* ── NAV ── */
     nav {
@@ -132,7 +151,18 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center top;
-        opacity: 0.25;
+        opacity: 0.25;            
+      }
+       .lang-switcher {
+         gap: 0.45rem;
+       }
+      .lang-btn {
+        width: 42px;
+        height: 36px;
+      }
+      .lang-btn img {
+        width: 26px;
+        height: 18px;
       }
     }
 
@@ -787,11 +817,19 @@
       <li><a href="#teenused" data-i18n="nav_teenused">Teenused</a></li>
       <li><a href="#kontakt" class="nav-cta" data-i18n="nav_kontakt">Võta ühendust</a></li>
     </ul>
-    <div class="lang-switcher">
-      <button class="lang-btn active" onclick="setLang('et')">🇪🇪</button>
-      <button class="lang-btn" onclick="setLang('en')">🇬🇧</button>
-      <button class="lang-btn" onclick="setLang('fi')">🇫🇮</button>
-    </div>
+  <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('et')">
+      <img src="ee.png" alt="Eesti" />
+      </button>
+
+      <button class="lang-btn" onclick="setLang('en')">
+      <img src="gb.png" alt="English" />
+      </button>
+
+      <button class="lang-btn" onclick="setLang('fi')">
+      <img src="fi.png" alt="Suomi" />
+      </button>
+  </div>
   </nav>
 
   <!-- HERO -->
